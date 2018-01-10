@@ -24,7 +24,7 @@ namespace GekkoBinanceImporter
             if (args.Length < 4)
             {
                 //TODO: print help
-                Console.WriteLine("pleas pass these parameters [asset][currency][start][end][gekko location]");
+                Console.WriteLine("please pass these parameters [asset][currency][start][end][gekko location]");
                 return;
             }
             else
@@ -92,7 +92,14 @@ namespace GekkoBinanceImporter
                         if (klines.Success)
                         {
                             Console.Write($"Got {klines.Data.Count()} candles.");
-                            // Don't know what vwp is
+
+                            if(klines.Data.Length ==0)
+                            {
+                                Console.WriteLine("Nothing to save.");
+                                continue;
+                            }
+
+                            // Doesn't calculate Volume Weighted Price
                             string sql = $"replace into candles_{asset}_{currency} (start, open, high, low, close, vwp, volume, trades) values "
                                 + string.Join(",", klines.Data.Select(k => $"(\"{k.OpenTime.ToFileTimeUtc().ToString()}\",\"{k.Open}\",\"{k.High}\",\"{k.Low}\",\"{k.Close}\",\"{k.Open}\",\"{k.Volume}\",\"{k.Trades}\")").ToArray())
                                 + ";";

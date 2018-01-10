@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GekkoBinanceImporter", "GekkoBinanceImporter\GekkoBinanceImporter.csproj", "{1DF41ACA-8CD7-4F30-95CC-9E230AA1874B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1DF41ACA-8CD7-4F30-95CC-9E230AA1874B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DF41ACA-8CD7-4F30-95CC-9E230AA1874B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DF41ACA-8CD7-4F30-95CC-9E230AA1874B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DF41ACA-8CD7-4F30-95CC-9E230AA1874B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {22A8628C-0397-4250-9314-A1EE0A2CC8B3}
+	EndGlobalSection
+EndGlobal
